@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <a href="/"><h1>Mongoose Digital Trends News Scraper</h1></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h3 data-id="{{article._id}}">Article ID: {{article._id}}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-4">
+                            <h4>{{article.headline}}</h4>
+
+                        </div>
+                        <div class="col-0"></div>
+                        <div class="col-5">
+                            <p>{{article.summary}}</p>
+                            <p><a href="{{article.url}}">{{article.url}}</a></p>
+                        </div>
+                        <div class="col-3">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <br><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p>All Comments for this article:</p>
+            <ul class="list-group">
+                {{#each article.comments}}
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-4">
+                            <h4>{{username}}</h4>
+                        </div>
+                        <div class="col-0"></div>
+                        <div class="col-5">
+                            <p>{{text}}</p>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-primary delete" type="button" data-id="{{_id}}">Delete Comment</button>
+                        </div>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+            <br><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-7">
+            <form>
+                <div class="form-group">
+                    <label for="new-username">Username:</label>
+                    <input type="text" class="form-control" id="new-username">
+                </div>
+                <div class="form-group">
+                    <label for="new-comment"></label>
+                    <textarea class="form-control" rows="4" placeholder="Enter your comment..." id="new-comment"></textarea>
+                </div>
+                <button type="button" class="btn btn-primary post" data-id="{{article._id}}">Post Comment</button>
+            </form>
+            <br><br>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/app-comments.js"></script>
