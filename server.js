@@ -83,32 +83,38 @@ app.get("/scrape", function(req, res) {
     .children(".m-river--meta")
         .children("h3.m-river--title")
         .text();
-    console.log(result.headline.trim());
-    console.log("87");
+    // console.log(result.headline.trim());
+    // console.log("87");
 
     result.summary = $(this)
         .children(".m-river--meta")
         .children(".m-river--content")
         .text();
-    console.log(result.summary.trim());
-    console.log("93");
+    // console.log(result.summary.trim());
+    // console.log("93");
 
     result.url = $(this)
     .children(".m-river--meta")
     .children("h3.m-river--title")
         .children("a")
         .attr("href");
-    console.log(result.url.trim());
-    console.log("100");
+    // console.log(result.url.trim());
+    // console.log("100");
 
-    result.img = $(this)
+    // result.img = $(element).find(".m-river--thumb").find("img").attr(".dt-lazy-src");
+    // console.log(result.img);
+    // console.log("109");
 
-    .children(".m-river--thumb")
-    .children("a")
-    .children("img.attachment")
-    .attr("img-src")
-    console.log(result.img);
-    console.log("109");
+    // .children(".m-content")
+    // .children("figure")
+    // .children("img-src")
+    // .attr("href")
+    // .children(".m-river--thumb")
+    // .children("img.dt-lazy-loaded")
+    // .children("a")
+    //   attr("img.src")
+    // console.log(result.img);
+    // console.log("109");
 
 
     // Check to see if the article already exists in the database; if it does, don't add another copy;
@@ -174,7 +180,7 @@ app.delete("/delete/:id", function(req, res) {
       // Log any errors from mongojs
       if (error) {
         console.log(error);
-        console.log("175");
+        // console.log("175");
         res.send(error);
       }
       else {
