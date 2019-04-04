@@ -1,38 +1,42 @@
 <div class="container">
+    <br>
     <div class="row">
-        <div class="col-12">
+        <div class="col-12" id="projectName">
             <h1>Mongoose Digital Trends News Scraper
-                <button class="btn btn-primary scrape" type="button">Scrape New Articles</button>
             </h1>
+            <br>
         </div>
     </div>
     <div class="row">
-        <div class="col-12">
-            <p>All scraped articles:</p>
+        <div class="col-12" id="allScrape">
+            <button class="btn btn-primary scrape" type="button"id="btnScrape">See What's New</button>
         </div>
     </div>
+    <br>
     <div class="row">
         <div class="col-12">
+            <br>
             <ul class="list-group">
                 {{#each articles}}
                 <li class="list-group-item">
                     <div class="row">
                         <div class="col-4">
+                            <br><br>
                             <h4>{{headline}}</h4>
                         </div>
                         <div class="col-5">
-                            <p>{{summary}}</p>
+                            <p class="summary">"{{summary}}"</p>
                             <p><a href="{{url}}">{{url}}</a></p>
                         </div>
                         <div class="col-3">
-
-                            <br>
+                            <br><br>
                             <a href="/articles/{{_id}}">
                             <button class="btn btn-primary" type="button" data-id="{{_id}}">View Comments</button></a>
                         </div>
                     </div>
                 </li>
                 {{/each}}
+                <br>
             </ul>
             <br><br>
         </div>
