@@ -1,26 +1,29 @@
 <div class="container">
+    <br>
     <div class="row">
-        <div class="col-12">
+        <div class="col-12"id="projectName">
             <a href="/"><h1>Mongoose Digital Trends News Scraper</h1></a>
+            <br>
         </div>
     </div>
     <div class="row">
-        <div class="col-12">
-            <h3 data-id="{{article._id}}">Article ID: {{article._id}}</h3>
+        <div class="col-12"id="articleId">
+            <h3 data-id="{{article._id}}">Article</h3>
         </div>
     </div>
+                <br>
     <div class="row">
         <div class="col-12">
             <ul class="list-group">
                 <li class="list-group-item">
                     <div class="row">
                         <div class="col-4">
+                            <br><br>
                             <h4>{{article.headline}}</h4>
 
                         </div>
-                        <div class="col-0"></div>
                         <div class="col-5">
-                            <p>{{article.summary}}</p>
+                            <p class="summary">"{{article.summary}}"</p>
                             <p><a href="{{article.url}}">{{article.url}}</a></p>
                         </div>
                         <div class="col-3">
@@ -33,17 +36,18 @@
     </div>
     <div class="row">
         <div class="col-12">
-            <p>All Comments for this article:</p>
+            <p class="commentsAll">All Comments for this article:</p>
             <ul class="list-group">
                 {{#each article.comments}}
                 <li class="list-group-item">
+                    <br>
                     <div class="row">
                         <div class="col-4">
-                            <h4>{{username}}</h4>
+                            <h4 class="userName">{{username}}</h4>
                         </div>
                         <div class="col-0"></div>
                         <div class="col-5">
-                            <p>{{text}}</p>
+                            <p class="text">{{text}}</p>
                         </div>
                         <div class="col-3">
                             <button class="btn btn-primary delete" type="button" data-id="{{_id}}">Delete Comment</button>
@@ -56,7 +60,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-7">
+        <div class="col-2"></div>
+        <div class="col-7"align="center">
             <form>
                 <div class="form-group">
                     <label for="new-username">Username:</label>
@@ -70,6 +75,7 @@
             </form>
             <br><br>
         </div>
+        <div class="col-2"></div>
     </div>
 </div>
 

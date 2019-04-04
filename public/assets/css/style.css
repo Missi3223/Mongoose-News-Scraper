@@ -1,20 +1,92 @@
 .bg {
 
-  background: rgba(255, 141, 0, 0.25) url("../img/bkgrndImage.jpg");
-  background-blend-mode: darken;
-
+  background: rgba(255, 141, 0, 0.11) url("../img/vintageBack.jpg");
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
 }
-h1,
-p{
-	color: #8D775D
+
+body {
+  font-family: 'Alegreya SC';
 }
-.row,
-.col-12{
-	background-color: #151526;
+
+.col-3 {
+  align-content: center
 }
-.col-12{
-	overflow: hidden;
+
+.btn:hover {
+  background-color: #721c24
+}
+
+.btn-primary {
+  background-color: #3D2C0E;
+  border-color: #3D2C0E;
+  font-family: 'Alegreya SC';
+
+}
+
+#projectName,
+#allScrape,
+#articleId {
+  align-content: center;
+  text-align: center;
+  font-family: 'Alegreya SC';
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-shadow: 2px -1px #adb5bd;
+}
+
+#btnScrape {
+  font-size: 1.5rem
+}
+
+p.summary {
+  font-weight: bold
+}
+
+a {
+  color: black
+}
+
+a:hover {
+  color: #007bff
+}
+
+.list-group-item {
+  background-color: #C2B6AC;
+  box-shadow: 0 0 4px 2px black;
+
+}
+
+h4 {
+  text-align: center;
+  font-weight: bolder;
+  color: #195E10
+}
+
+.userName {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.text {
+  font-size: 1.3rem
+}
+
+form,
+.form-control {
+  font-size: 1.3rem
+}
+
+.form-control {
+  background-image: url(../img/notepad-background.jpg);
+  background-size: cover
+}
+
+.commentsAll {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold
 }
