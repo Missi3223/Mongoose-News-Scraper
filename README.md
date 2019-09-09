@@ -2,7 +2,7 @@
 
 # scrape-the-news
 
-Created in Week 18 of UDCB. Uses Cheerio to scrape news articles from a site and allows the user to make comments and delete them. Uses Mongoose to store comments and articles.
+Created with the use of Cheerio to scrape news articles from a site and allows the user to make comments and delete them. Uses Mongoose to store comments and articles.
 
 ## Getting Started
 
